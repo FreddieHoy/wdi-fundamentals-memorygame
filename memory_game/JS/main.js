@@ -27,9 +27,9 @@ var cardsInPlay = [];
 
 function checkForMatch() {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
-			console.log('You found a match!')
+			alert('You found a match!')
 		} else {
-			console.log('Sorry, try again.')
+			alert('Sorry, try again!')
 		}
 }
 
@@ -61,6 +61,16 @@ function createBoard() {
 }
 
 createBoard();
+
+function cardReset () {
+	for (var j = 0; j < cards.length; j++){
+		document.getElementById('gameboard').setAttribute('src', 'images/back.png');
+}
+}
+
+document.getElementById('reset').addEventListener('click', cardReset);
+
+
 
 
 
